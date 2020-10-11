@@ -8,7 +8,7 @@ The existing stock ticker code performance is terrible. This project aims to ref
 ### Analysis of single loop method vs. n(ticker) loops.
 The single loop method is %24600 faster than executing a nested loop. When performing the nested loop of an outer loop for each stock ticker and an inner loop of the stock data for that year, the machine becomes unresponsive due to the additional CPU resource demand.
 
-VBA cannot take advantage of multiple cores, so the result of non-optimized code is an inefficient use of resources.
+VBA cannot take advantage of multiple cores, so it's essential to be as efficient as possible to avoid overloading a single thread.
 
 ![CPU LOAD](https://raw.githubusercontent.com/skanab/stock-analysis/main/Resources/CPU%20Load.PNG)
 
